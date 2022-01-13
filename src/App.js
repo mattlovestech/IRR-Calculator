@@ -5,6 +5,8 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import InputField from "./components/Input";
 
 
 function App() {
@@ -20,8 +22,9 @@ function App() {
         <b>I</b>nternal <b>R</b>ate of <b>R</b>eturn <small>Calculator</small>
       </Typography>
           <hr/>
-
-
+<InputField/>
+<InputField/>
+<InputField/>
               <Typography variant={"h4"}  color="text.white">
                   Wait....what is Internal Rate of Return?
               </Typography>
