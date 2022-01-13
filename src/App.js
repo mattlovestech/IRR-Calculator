@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Card from '@mui/material/Card';
 function App() {
   return (
-    <div className="App">
+    <Card className="App" width={500}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </Card>
   );
 }
 
