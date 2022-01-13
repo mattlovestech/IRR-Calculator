@@ -14,6 +14,23 @@
       </list>
     </option>
   </component>
+  <component name="IlluminatedCloudWorkspaceSettings">
+    <option name="projectWorkspaceSettings">
+      <ProjectWorkspaceSettings>
+        <option name="anonymousApexSettings">
+          <AnonymousApexSettings>
+            <option name="savedDocuments">
+              <list>
+                <AnonymousApexSavedDocument>
+                  <option name="name" value="Anonymous Apex 1" />
+                </AnonymousApexSavedDocument>
+              </list>
+            </option>
+          </AnonymousApexSettings>
+        </option>
+      </ProjectWorkspaceSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="23csTf9RqK0tu2MMl8qJ2qD6tB0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642044719054</updated>
-      <workItem from="1642044720205" duration="3946000" />
+      <workItem from="1642044720205" duration="4630000" />
     </task>
     <servers />
   </component>
