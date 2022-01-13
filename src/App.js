@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import InputField from "./components/Input";
 import CalculateButton from "./components/CalculateButton";
+import React from "react";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
 
       <header className="App-header">
+          <CalculateButton/>
           <div style={{padding: "40px"}}>
       <Typography variant={"h3"} color="text.white" gutterBottom>
         <b>I</b>nternal <b>R</b>ate of <b>R</b>eturn <small>Calculator</small>
@@ -29,7 +31,7 @@ function App() {
               <Typography variant={"h4"}  color="text.white">
                   Wait....what is Internal Rate of Return?
               </Typography>
-              <CalculateButton/>
+
               <br/>
               <hr/>
               <Button variant="outlined" > <Typography variant={"h6"}  color="text.white">

@@ -62,11 +62,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642044719054</updated>
-      <workItem from="1642044720205" duration="4630000" />
+      <workItem from="1642044720205" duration="7464000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="213" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1642100668465">
+      <screen x="56" y="23" width="1384" height="877" />
+    </state>
+    <state x="213" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/56.23.1384.877@56.23.1384.877" timestamp="1642100668465" />
   </component>
 </project>
