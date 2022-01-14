@@ -19,6 +19,7 @@ function App() {
 
 
       <header className="App-header">
+
           <CalculateButton/>
           <div style={{padding: "40px"}}>
       <Typography variant={"h3"} color="text.white" gutterBottom>
