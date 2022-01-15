@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -55,20 +56,20 @@ export default function BasicTabs() {
         <Box sx={{ width: '100%', backgroundColor: "silver"}}>
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab label="IRR Calculator" {...a11yProps(0)} />
+                    <Tab className={"oswald"} label="IRR Calculator" {...a11yProps(0)} />
                     <Tab label="NPV Calculator" {...a11yProps(1)} />
-                    <Tab label="Learn More" {...a11yProps(2)} />
+
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                IRR Calculator
+                <Button variant="outlined" > <Typography variant={"h6"}  color="text.white">
+                    Learn more
+                </Typography></Button>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                NPV Calculator
+                <a className={"oswald"}>NPV Calculator</a>
             </TabPanel>
-            <TabPanel value={value} index={2}>
-                Learn More
-            </TabPanel>
+
         </Box>
 
             </Container>
