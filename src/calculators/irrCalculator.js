@@ -5,12 +5,21 @@ import InputLabel from "@mui/material/InputLabel";
 import CalculateButton from "../components/CalculateButton";
 
 export default class IRRCalculator extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+    }
     handleSubmit = (event) => {
         event.preventDefault()
     }
 
-    handleInputChange = () => {
-
+    handleInputChange = (event) => {
+        event.preventDefault()
+        console.log(event)
+        console.log(event.target.value)
+        console.log(event.target.id)
     }
 
     render() {
@@ -19,7 +28,15 @@ export default class IRRCalculator extends Component {
             <form onSubmit={this.handleSubmit}>
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Initial Investment</InputLabel>
-                    <Input id="component-simple" value={"name"} onChange={this.handleInputChange} />
+                    <Input id="initial" value={"-0"} onChange={this.handleInputChange} />
+                </FormControl>
+                <FormControl variant="standard">
+                    <InputLabel htmlFor="component-simple">Year 1</InputLabel>
+                    <Input id="year-1" value={"0"} onChange={this.handleInputChange} />
+                </FormControl>
+                <FormControl variant="standard">
+                    <InputLabel htmlFor="component-simple">Year 2</InputLabel>
+                    <Input id="year-2" value={"0"} onChange={this.handleInputChange} />
                 </FormControl>
             </form>
 

@@ -64,6 +64,7 @@ export default function BasicTabs() {
             </Box>
             <TabPanel value={value} index={0}>
                 <IRRCalculator/>
+                <hr/>
                 <Button className={"oswald"} variant="outlined" > <Typography variant={"h6"}  color="text.white">
                     Learn more
                 </Typography></Button>
