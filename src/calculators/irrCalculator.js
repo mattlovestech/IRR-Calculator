@@ -49,8 +49,9 @@ export default class IRRCalculator extends Component {
                     <InputLabel htmlFor="component-simple">Year 3</InputLabel>
                     <Input  type={"number"} id="year3" value={this.state.year3} onChange={this.handleInputChange} />
                 </FormControl>
+
             </form>
-            <h1>IRR %{internalRateOfReturn([this.state.initial,this.state.year1,this.state.year2, this.state.year3])}</h1>
+           <h1>IRR %{internalRateOfReturn([this.state.initial,this.state.year1,this.state.year2, this.state.year3])}</h1>
 
     </>
 

@@ -4,9 +4,17 @@ import Typography from "@mui/material/Typography";
 const { irr } = require('node-irr')
 
 export default function internalRateOfReturn(data) {
-
     const rawIRRPercentage = irr(data)
+    let finalPercentage = ""
+    console.log(rawIRRPercentage)
+    console.log(isNaN(rawIRRPercentage))
+    switch (isNaN(rawIRRPercentage)) {
 
-    return (Math.round(rawIRRPercentage).toFixed(3))
-
+        case true:
+            finalPercentage = "0"
+            break;
+        case false:
+            finalPercentage = Math.round(rawIRRPercentage).toFixed(3)
+    }
+    return finalPercentage
 }

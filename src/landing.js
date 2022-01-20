@@ -64,7 +64,7 @@ export default function BasicTabs() {
                     <Tab  style={{fontFamily: 'Oswald'}} label="NPV Calculator" {...a11yProps(1)} />
                 </Tabs>
             </Box>
-            <TabPanel value={value} index={0} style={{"text-align": "center"}}>
+            <TabPanel value={value} index={0} style={{"textAlign": "center"}}>
                 <IRRCalculator/>
                 <br/>
                 <Alert severity="info">
