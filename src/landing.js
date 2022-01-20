@@ -21,8 +21,8 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 4 }}>
-                    <Typography>{children}</Typography>
+                <Box>
+                   {children}
                 </Box>
             )}
         </div>
@@ -64,7 +64,7 @@ export default function BasicTabs() {
             </Box>
             <TabPanel value={value} index={0}>
                 <IRRCalculator/>
-                <Button className={"oswald"}variant="outlined" > <Typography variant={"h6"}  color="text.white">
+                <Button className={"oswald"} variant="outlined" > <Typography variant={"h6"}  color="text.white">
                     Learn more
                 </Typography></Button>
             </TabPanel>
