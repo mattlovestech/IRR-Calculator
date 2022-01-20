@@ -8,6 +8,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import IRRCalculator from "./calculators/irrCalculator";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -62,12 +64,17 @@ export default function BasicTabs() {
                     <Tab  style={{fontFamily: 'Oswald'}} label="NPV Calculator" {...a11yProps(1)} />
                 </Tabs>
             </Box>
-            <TabPanel value={value} index={0}>
+            <TabPanel value={value} index={0} style={{"text-align": "center"}}>
                 <IRRCalculator/>
-                <hr/>
-                <Button className={"oswald"} variant="outlined" > <Typography variant={"h6"}  color="text.white">
-                    Learn more
-                </Typography></Button>
+                <br/>
+                <Alert severity="info">
+                    <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
+                    IRR stands for Internal Rate of Return, it is an important data point
+                   for making decisions about investments
+
+                </Alert>
+
+
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <a className="oswald">NPV Calculator</a>
