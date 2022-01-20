@@ -14,7 +14,7 @@ export default function internalRateOfReturn(data) {
             finalPercentage = "0"
             break;
         case false:
-            finalPercentage = Math.round(rawIRRPercentage).toFixed(3)
+            finalPercentage = Math.round(rawIRRPercentage*100)
     }
     return finalPercentage
 }

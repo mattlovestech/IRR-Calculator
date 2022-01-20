@@ -65,6 +65,9 @@ export default function BasicTabs() {
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0} style={{"textAlign": "center"}}>
+                <br/>
+                <i style={{fontSize: "12px", padding: "12px"}}><strong>How it Works</strong> <br/> Add your data
+                    for each year & instantly calculate your IRR</i>
                 <IRRCalculator/>
                 <br/>
                 <Alert severity="info">
