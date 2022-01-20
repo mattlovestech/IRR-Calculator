@@ -30,5 +30,6 @@ export default function internalRateOfReturn(data) {
     //     console.log("NPV:", npv, " discount", discount)
     //
     // }
-    return data
+    return (irr(data))
+
 }
