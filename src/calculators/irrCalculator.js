@@ -8,7 +8,8 @@ export default class IRRCalculator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+                initial: 0,
+                1: "a"
         }
     }
     handleSubmit = (event) => {
@@ -20,15 +21,19 @@ export default class IRRCalculator extends Component {
         console.log(event)
         console.log(event.target.value)
         console.log(event.target.id)
+        this.setState({
+            [event.target.id]: event.target.value
+        })
     }
 
     render() {
         return(
 
+
             <form onSubmit={this.handleSubmit}>
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Initial Investment</InputLabel>
-                    <Input id="initial" value={"-0"} onChange={this.handleInputChange} />
+                    <Input id="initial" value={this.state.initial} onChange={this.handleInputChange} />
                 </FormControl>
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Year 1</InputLabel>
