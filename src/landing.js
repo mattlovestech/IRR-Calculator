@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import IRRCalculator from "./calculators/irrCalculator";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -53,21 +54,22 @@ export default function BasicTabs() {
             <CssBaseline />
             <Container maxWidth="md">
 
+
         <Box sx={{ width: '100%', backgroundColor: "silver"}}>
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab className={"oswald"} label="IRR Calculator" {...a11yProps(0)} />
-                    <Tab label="NPV Calculator" {...a11yProps(1)} />
-
+                <Tabs className={"oswald"} value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tab style={{fontFamily: 'Oswald', backgroundColor: "green", color: "black"}} label="IRR Calculator" {...a11yProps(0)} />
+                    <Tab  style={{fontFamily: 'Oswald'}} label="NPV Calculator" {...a11yProps(1)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                <Button variant="outlined" > <Typography variant={"h6"}  color="text.white">
+                <IRRCalculator/>
+                <Button className={"oswald"}variant="outlined" > <Typography variant={"h6"}  color="text.white">
                     Learn more
                 </Typography></Button>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <a className={"oswald"}>NPV Calculator</a>
+                <a className="oswald">NPV Calculator</a>
             </TabPanel>
 
         </Box>

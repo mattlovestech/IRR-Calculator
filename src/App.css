@@ -34,3 +34,9 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiTabs-indicator {
+  background-color: red !important  /*Styles indicator*/
+
+;
+}
