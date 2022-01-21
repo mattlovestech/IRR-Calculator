@@ -41,3 +41,10 @@
 .MuiInputLabel-root {
   color: white !important;
 }
+.MuiTabs-flexContainer {
+
+
+background: #EB9486;
+height: 50px;
+
+}
