@@ -4,6 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import internalRateOfReturn from "../formulas/internalRateofRetrun";
 import TextField from "@mui/material/TextField";
+import IrrInput from "../components/CalculateButton";
 
 
 
@@ -24,7 +25,7 @@ export default class IRRCalculator extends Component {
     }
 
     handleInputChange = (event) => {
-        event.preventDefault()
+        // event.preventDefault()
         this.setState({
             [event.target.id]: event.target.value
         })
@@ -56,9 +57,11 @@ export default class IRRCalculator extends Component {
                     <Input style={{fontSize: "20px"}}   type={"number"} id="year3" value={this.state.year3} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
+
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Year 4</InputLabel>
-                    <Input style={{fontSize: "20px"}}  type={"number"} id="year4" value={this.state.year4} onChange={this.handleInputChange}    />
+                    <IrrInput id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
+                    {/*<Input style={{fontSize: "20px"}}  type={"number"} id="year4" value={this.state.year4} onChange={this.handleInputChange}    />*/}
                 </FormControl>
 
             </form>
