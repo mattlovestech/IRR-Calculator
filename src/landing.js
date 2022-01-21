@@ -52,14 +52,15 @@ export default function BasicTabs() {
     };
 
     return (
-        <React.Fragment>
 
 
+
+            <React.Fragment>
         <Box>
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
                 <Tabs className={"oswald"} value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab style={{fontFamily: 'Oswald', backgroundColor: "green", color: "black"}} label="IRR Calculator" {...a11yProps(0)} />
-                    <Tab  style={{fontFamily: 'Oswald'}} label="NPV Calculator" {...a11yProps(1)} />
+                    <Tab style={{fontFamily: 'Oswald', fontSize: "18px", backgroundColor: "black", color: "#EB9486"}} label="IRR Calculator 📈" {...a11yProps(0)} />
+                    <Tab  style={{fontFamily: 'Oswald', fontSize: "18px", color: "#E5F6FD", backgroundColor: "#014361"}} label="What is IRR? 👀" {...a11yProps(1)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0} style={{"textAlign": "center"}}>
@@ -81,9 +82,9 @@ export default function BasicTabs() {
                 <a className="oswald">What is IRR</a>
             </TabPanel>
 
-        </Box>
+        </Box>    </React.Fragment>
 
 
-        </React.Fragment>
+
     );
 }

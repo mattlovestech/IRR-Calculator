@@ -7,7 +7,10 @@ import BasicTabs from "./landing";
 
 ReactDOM.render(
   <React.StrictMode>
+
+
     <BasicTabs/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
