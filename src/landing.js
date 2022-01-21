@@ -69,7 +69,7 @@ export default function BasicTabs() {
                     for each year & instantly calculate see the IRR calculated</p>
                 <IRRCalculator/>
                 <br/>
-                <Alert severity="info" style={{opacity: ".8"}}>
+                <Alert severity="info" style={{opacity: ".85", backgroundColor: "red !important"}}>
                     <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
                     IRR stands for Internal Rate of Return, it is an important data point
                    when making investment decisions
