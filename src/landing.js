@@ -31,6 +31,7 @@ function TabPanel(props) {
     );
 }
 
+
 TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
@@ -50,6 +51,11 @@ export default function BasicTabs() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const tabsColor = {
+        0: '#EB9486',
+        1: '#ffffff',
+    };
+
 
     return (
 
@@ -58,9 +64,9 @@ export default function BasicTabs() {
             <React.Fragment>
         <Box>
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
-                <Tabs className={"oswald"} value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab style={{fontFamily: 'Oswald', fontSize: "18px", backgroundColor: "black", color: "#EB9486"}} label="IRR Calculator 📈" {...a11yProps(0)} />
-                    <Tab  style={{fontFamily: 'Oswald', fontSize: "18px", color: "#E5F6FD", backgroundColor: "#014361"}} label="What is IRR? 👀" {...a11yProps(1)} />
+                <Tabs TabIndicatorProps={{style: {background:tabsColor[value],outlineOffset: "-2px"}}} className={"oswald"} value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tab style={{fontFamily: 'Oswald', fontSize: "20px", backgroundColor: "black", color: "#EB9486"}} label="IRR Calculator 📈" {...a11yProps(0)} />
+                    <Tab  style={{fontFamily: 'Oswald', fontSize: "20px", color: "#E5F6FD", backgroundColor: "#EB9486"}} label="What is IRR? 👀" {...a11yProps(1)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0} >
@@ -69,18 +75,18 @@ export default function BasicTabs() {
                     for each year & instantly calculate see the IRR calculated</p>
                 <IRRCalculator/>
                 <br/>
-                <Alert severity="info" style={{opacity: ".85", backgroundColor: "red !important"}}>
+                <Alert severity="info" style={{opacity: ".85", backgroundColor: "transparent !important"}}>
                     <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
                     IRR stands for Internal Rate of Return, it is an important data point
-                   when making investment decisions
+                    when making investment decisions
                     <hr/>
-                    <Button style={{backgroundColor: "#014361", color: "#E5F6FD"}} variant={"outlined"}>Learn More</Button>
+                    <Button onClick={() => setValue(1)} style={{backgroundColor: "#014361", color: "#E5F6FD"}} variant={"outlined"}>Learn More</Button>
                 </Alert>
 
 
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Alert severity="info" style={{backgroundColor: "transparent !important"}}>
+                <Alert severity="info" style={{opacity: ".85", backgroundColor: "red !important"}}>
                     <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
                     IRR stands for Internal Rate of Return, it is an important data point
                     when making investment decisions
