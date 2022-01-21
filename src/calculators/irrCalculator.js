@@ -55,7 +55,7 @@ export default class IRRCalculator extends Component {
                 </FormControl>
 
             </form>
-           <h1>IRR {internalRateOfReturn([this.state.initial,this.state.year1,this.state.year2, this.state.year3])}%</h1>
+           <h1>IRR {internalRateOfReturn([this.state.initial,this.state.year1,this.state.year2, this.state.year3, this.state.year4])}%</h1>
 
     </>
 
