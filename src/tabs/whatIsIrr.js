@@ -1,17 +1,27 @@
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import netPresentValue from "../formulas/netPresentValue";
-import internalRateOfReturnfRetrun from "../formulas/internalRateofRetrun";
-import internalRateOfReturn from "../formulas/internalRateofRetrun";
-export default function CalculateButton() {
-    return(<>
-            <Button onClick={() => internalRateOfReturn([-500000,210000,237000,265000])} > <Typography variant={"h6"}  color="primary">
-                Calculate IRR
-            </Typography></Button>
+import * as React from "react";
+import Tabs from "@mui/material/Tabs";
+import Alert from "@mui/material/Alert";
 
-            <Button onClick={() => netPresentValue(1.06,{0: -500000, 1: 210000, 2: 237000, 3: 265000})} > <Typography variant={"h6"}  color="primary">
-                Calculate NPV
-            </Typography></Button>
+export default function WhatIsIRR() {
+    return(<>
+            <br/>
+            <div style={{fontFamily: 'oswald' ,
+                fontSize: "20px",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+                color: "black",
+                opacity: ".8"
+            }}>
+                <p><strong>Learn about Internal Rate of Return</strong> <br/> Internal Rate of Return, it is an important data point
+                when making investment decisions</p>
+
+            <h4>TL:DR - just watch this video I made👇🏿</h4>
+            <div style={{textAlign: "center"}}>
+                <iframe  src="https://www.youtube.com/embed/aSnPIfBjlHc" />
+            </div>
+            </div>
+
+
         </>
 
     )

@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import IRRCalculator from "./tabs/irrCalculator";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
+import WhatIsIRR from "./tabs/whatIsIrr";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -87,10 +88,8 @@ export default function BasicTabs() {
             </TabPanel>
 
             <TabPanel value={value} index={1} style={{backgroundColor: "#EB9486"}}>
-                <br/>
-                    <p style={{fontFamily: 'oswald' ,fontSize: "20px", paddingLeft: "20px", paddingRight: "20px", color: "white"}}><strong>How it Works</strong> <br/> Add your data
-                        for each year & instantly calculate see the IRR calculated</p>
-                    {/*<Alert severity="info" style={{opacity: ".85", backgroundColor: "red !important"}}>*/}
+                <WhatIsIRR/>
+                   {/*<Alert severity="info" style={{opacity: ".85", backgroundColor: "red !important"}}>*/}
                     {/*    <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>*/}
                     {/*    IRR stands for Internal Rate of Return, it is an important data point*/}
                     {/*    when making investment decisions*/}
