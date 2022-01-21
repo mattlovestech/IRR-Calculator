@@ -63,23 +63,26 @@ export default function BasicTabs() {
                     <Tab  style={{fontFamily: 'Oswald', fontSize: "18px", color: "#E5F6FD", backgroundColor: "#014361"}} label="What is IRR? 👀" {...a11yProps(1)} />
                 </Tabs>
             </Box>
-            <TabPanel value={value} index={0} style={{"textAlign": "center"}}>
+            <TabPanel value={value} index={0} >
                 <br/>
-                <i style={{fontSize: "12px", padding: "12px"}}><strong>How it Works</strong> <br/> Add your data
-                    for each year & instantly calculate your IRR</i>
+                <p style={{fontFamily: 'oswald' ,fontSize: "20px", paddingLeft: "20px", paddingRight: "20px", color: "white"}}><strong>How it Works</strong> <br/> Add your data
+                    for each year & instantly calculate see the IRR calculated</p>
                 <IRRCalculator/>
                 <br/>
                 <Alert severity="info">
                     <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
                     IRR stands for Internal Rate of Return, it is an important data point
-                   for making decisions about investments
-
+                   when making investment decisions
                 </Alert>
 
 
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <a className="oswald">What is IRR</a>
+                <Alert severity="info" style={{backgroundColor: "transparent !important"}}>
+                    <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
+                    IRR stands for Internal Rate of Return, it is an important data point
+                    when making investment decisions
+                </Alert>
             </TabPanel>
 
         </Box>    </React.Fragment>

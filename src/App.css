@@ -40,3 +40,9 @@
 
 ;
 }
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  color: grey !important;
+}
+.MuiInputLabel-root {
+  color: white !important;
+}
