@@ -17,11 +17,9 @@ export default function WhatIsIRR() {
 
             <h4>TL:DR - just watch this video I made👇🏿</h4>
             <div style={{textAlign: "center"}}>
-                <iframe  src="https://www.youtube.com/embed/aSnPIfBjlHc" />
+                <iframe width={"100%"} height={"250px"} src="https://www.youtube.com/embed/aSnPIfBjlHc" />
             </div>
             </div>
-
-
         </>
 
     )

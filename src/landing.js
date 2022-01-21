@@ -76,28 +76,28 @@ export default function BasicTabs() {
                     for each year & instantly calculate see the IRR calculated</p>
                 <IRRCalculator/>
                 <br/>
-                <Alert severity="info" style={{opacity: ".85", backgroundColor: "transparent !important"}}>
-                    <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>
+                <div style={{opacity: ".85", backgroundColor: "#EB9486", padding: "20px", fontFamily: "oswald", fontSize: "20px"}}>
+                    Wait...<strong>what is IRR? 👀</strong>
+                    <br/>
                     IRR stands for Internal Rate of Return, it is an important data point
                     when making investment decisions
-                    <hr/>
-                    <Button onClick={() => setValue(1)} style={{backgroundColor: "#014361", color: "#E5F6FD"}} variant={"outlined"}>Learn More</Button>
-                </Alert>
+                   <br/>
+                   <br/>
+                    <Button onClick={() => setValue(1)} style={{backgroundColor: "#121212", color: "#EB9486"}} variant={"outlined"}>Learn More</Button>
+                </div>
 
 
             </TabPanel>
 
             <TabPanel value={value} index={1} style={{backgroundColor: "#EB9486"}}>
                 <WhatIsIRR/>
-                   {/*<Alert severity="info" style={{opacity: ".85", backgroundColor: "red !important"}}>*/}
-                    {/*    <AlertTitle>Wait...<strong>what is IRR? 👀</strong></AlertTitle>*/}
-                    {/*    IRR stands for Internal Rate of Return, it is an important data point*/}
-                    {/*    when making investment decisions*/}
-                    {/*</Alert>*/}
-        <br/>
+                <br/>
+
             </TabPanel>
+            <p style={{color:"white",textAlign: "center"}}> Follow <strong>@mattlovestech</strong> for more on TikTok, YouTube and Instagram </p>
 
         </Box>
+
             </React.Fragment>
 
 
