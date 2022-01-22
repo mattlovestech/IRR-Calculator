@@ -36,7 +36,7 @@ export default class IRRCalculator extends Component {
         return(
 
     <>
-            <form onSubmit={this.handleSubmit} style={{"textAlign": "center", backgroundColor: "#EB9486", opacity: ".8"}}>
+            <form onSubmit={this.handleSubmit} style={{"textAlign": "center", backgroundColor: "#EB9486", opacity: ".8", padding: "10px 0px 30px 0px"}}>
 
 
                     {/*<InputLabel htmlFor="component-simple">Initial Investment</InputLabel>*/}
