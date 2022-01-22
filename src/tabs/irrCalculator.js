@@ -16,12 +16,15 @@ export default class IRRCalculator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-                initial: '',
-                year1: '',
-                year2: '',
-                year3: '',
-                year4: '',
-                points: 5
+            initial: 5,
+            year1: 1,
+
+                points: 5,
+                yearsArray: {
+                    year2: '',
+                    year3: '',
+                    year4: '',
+                },
         }
     }
     handleSubmit = (event) => {
@@ -30,11 +33,45 @@ export default class IRRCalculator extends Component {
     }
 
     handleInputChange = (event) => {
-        //event.preventDefault()
-        console.log("change")
-        this.setState({
-            [event.target.id]: event.target.value
+        switch (event.target.id) {
+            case "initial" || "year1":
+                console.log("do nothing")
+                this.setState({
+                    [event.target.id]: event.target.value
+                })
+                break;
+            default:
+                this.setState(prevState => {
+                    let yearsArray = Object.assign({}, prevState.yearsArray);  // creating copy of state variable
+                    const id = event.target.id
+
+                    yearsArray[id] = event.target.value;                     // update the name property, assign a new value
+                    return { yearsArray };                                 // return new object to state
+                })
+        }
+
+    }
+
+    addYear() {
+        this.setState(prevState => {
+            let yearsArray = Object.assign({}, prevState.yearsArray);  // creating copy of state variable
+            const id = "year" + ((Object.keys(this.state.yearsArray).length) + 2)
+
+            yearsArray[id] = '';                     // update the name property, assign a new value
+            return { yearsArray };                                 // return new object to state
         })
+    }
+    removeYear() {
+
+        let yearsArray = this.state.yearsArray;
+        console.log(yearsArray)
+        const id = "year" + ((Object.keys(this.state.yearsArray).length) + 1)
+        delete yearsArray[id];
+        console.log(id)
+        console.log(yearsArray[id])
+        console.log(yearsArray)
+        this.setState(yearsArray);
+        console.log("state", this.state.yearsArray)
     }
 
     renderInputs(numberOfInputs) {
@@ -61,26 +98,31 @@ export default class IRRCalculator extends Component {
 
                 <br/>
 
-                    {/*<InputLabel htmlFor="component-simple">Year 2</InputLabel>*/}
-                    <IrrInput label="Year 2"  id="year2" value={this.state.year2} onChange={this.handleInputChange} />
+                {/*    /!*<InputLabel htmlFor="component-simple">Year 2</InputLabel>*!/*/}
+                {/*    <IrrInput label="Year 2"  id="year2" value={this.state.year2} onChange={this.handleInputChange} />*/}
 
-                <br/>
-
-                    {/*<InputLabel htmlFor="component-simple">Year 3</InputLabel>*/}
-                    <IrrInput label="Year 3"   id="year3" value={this.state.year3} onChange={this.handleInputChange} />
-
-                <br/>
-
-
-                    {/*<InputLabel htmlFor="component-simple">Year 4</InputLabel>*/}
-                    <IrrInput label="Year 4" id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
-                    <br/>
-                {/*<Button variant="contained">Add</Button>*/}
-                {/*<Button variant="contained">Remove</Button>*/}
                 {/*<br/>*/}
-                {/*{Array(this.state.points).fill(<IrrInput />)}*/}
+
+                {/*    /!*<InputLabel htmlFor="component-simple">Year 3</InputLabel>*!/*/}
+                {/*    <IrrInput label="Year 3"   id="year3" value={this.state.year3} onChange={this.handleInputChange} />*/}
+
+                {/*<br/>*/}
+
+
+                {/*    /!*<InputLabel htmlFor="component-simple">Year 4</InputLabel>*!/*/}
+                {/*    <IrrInput label="Year 4" id="year4" value={this.state.year4} onChange={this.handleInputChange}/>*/}
+                {/*    <br/>*/}
+                {Array.from(Array(Object.keys(this.state.yearsArray).length)).map((x, index) => <><IrrInput value={this.state.yearsArray["year" + (index + 2)]} onChange={this.handleInputChange} id={"year" + (index + 2)} label={"Year " + (index + 2) } key={index} /><br/></>)}
+                <br/>
+                <Button onClick={() => this.addYear()} variant="contained">Add</Button>
+                <Button onClick={() => this.removeYear()} variant="contained">Remove</Button>
+
+                <br/>
+                {/*{Array(this.state.points).fill(<IrrInput  />)}*/}
+
+
             </form>
-           <h1 style={{"textAlign": "center",fontFamily: 'oswald', fontSize: "40px", color: "white"}} >IRR {internalRateOfReturn([-this.state.initial,this.state.year1,this.state.year2, this.state.year3, this.state.year4])}%</h1>
+           <h1 style={{"textAlign": "center",fontFamily: 'oswald', fontSize: "40px", color: "white"}} >IRR {internalRateOfReturn([-this.state.initial,this.state.year1].concat(Object.values(this.state.yearsArray)))}%</h1>
 
 
 
