@@ -3,8 +3,8 @@ import {Input} from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import internalRateOfReturn from "../formulas/internalRateofRetrun";
-import TextField from "@mui/material/TextField";
-import IrrInput from "../components/CalculateButton";
+
+import IrrInput from "../components/IrrInput";
 
 
 
@@ -25,7 +25,8 @@ export default class IRRCalculator extends Component {
     }
 
     handleInputChange = (event) => {
-        // event.preventDefault()
+        //event.preventDefault()
+        console.log("change")
         this.setState({
             [event.target.id]: event.target.value
         })
@@ -35,37 +36,37 @@ export default class IRRCalculator extends Component {
         return(
 
     <>
-            <form onSubmit={this.handleSubmit} style={{"textAlign": "center", backgroundColor: "#121212"}}>
+            <form onSubmit={this.handleSubmit} style={{"textAlign": "center", borderColor: "#EB9486", opacity: ".8"}}>
 
                 <FormControl  variant="standard">
                     <InputLabel htmlFor="component-simple">Initial Investment</InputLabel>
-                    <Input style={{fontSize: "20px"}} required={true} type={"number"} id="initial" value={this.state.initial} onChange={this.handleInputChange} />
+                    <IrrInput id="initial" value={this.state.initial} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
                 <FormControl variant="standard">
                     <InputLabel  htmlFor="component-simple">Year 1</InputLabel>
-                    <Input style={{fontSize: "20px"}} type={"number"} id="year1" value={this.state.year1}  onChange={this.handleInputChange}  />
+                    <IrrInput id="year1" value={this.state.year1}  onChange={this.handleInputChange}  />
                 </FormControl>
                 <br/>
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Year 2</InputLabel>
-                    <Input style={{fontSize: "20px"}}   type={"number"} id="year2" value={this.state.year2} onChange={this.handleInputChange} />
+                    <IrrInput id="year2" value={this.state.year2} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Year 3</InputLabel>
-                    <Input style={{fontSize: "20px"}}   type={"number"} id="year3" value={this.state.year3} onChange={this.handleInputChange} />
+                    <IrrInput   id="year3" value={this.state.year3} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
 
                 <FormControl variant="standard">
                     <InputLabel htmlFor="component-simple">Year 4</InputLabel>
                     <IrrInput id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
-                    {/*<Input style={{fontSize: "20px"}}  type={"number"} id="year4" value={this.state.year4} onChange={this.handleInputChange}    />*/}
                 </FormControl>
 
             </form>
            <h1 style={{"textAlign": "center",fontFamily: 'oswald', fontSize: "40px", color: "white"}} >IRR {internalRateOfReturn([-this.state.initial,this.state.year1,this.state.year2, this.state.year3, this.state.year4])}%</h1>
+
 
 
     </>

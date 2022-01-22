@@ -48,3 +48,9 @@ background: #EB9486;
 height: 50px;
 
 }
+.css-1480iag-MuiInputBase-root-MuiInput-root:after{
+
+  font-family: 'Oswald', sans-serif;
+  color: #fff !important;
+  border-bottom: 2px solid #eb9486 !Important;
+}

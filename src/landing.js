@@ -67,7 +67,7 @@ export default function BasicTabs() {
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
                 <Tabs TabIndicatorProps={{style: {background:tabsColor[value],outlineOffset: "-2px"}}} className={"oswald"} value={value} onChange={handleChange} aria-label="basic tabs example">
                     <Tab style={{fontFamily: 'Oswald', fontSize: "20px", backgroundColor: "black", color: "#EB9486"}} label="IRR Calculator 📈" {...a11yProps(0)} />
-                    <Tab  style={{fontFamily: 'Oswald', fontSize: "20px", color: "#E5F6FD", backgroundColor: "#EB9486"}} label="What is IRR? 👀" {...a11yProps(1)} />
+                    <Tab  style={{fontFamily: 'Oswald', fontSize: "20px", color: "white", backgroundColor: "#EB9486"}} label="What is IRR? 👀" {...a11yProps(1)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0} >

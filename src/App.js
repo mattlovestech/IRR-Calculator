@@ -7,7 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 
-import CalculateButton from "./components/CalculateButton";
+
 import React from "react";
 
 
@@ -20,7 +20,6 @@ function App() {
 
       <header className="App-header">
 
-          <CalculateButton/>
           <div style={{padding: "40px"}}>
       <Typography variant={"h3"} color="text.white" gutterBottom>
         <b>I</b>nternal <b>R</b>ate of <b>R</b>eturn <small>Calculator</small>
