@@ -94,9 +94,13 @@ export default function BasicTabs() {
                 <br/>
 
             </TabPanel>
-            <p style={{color:"white",textAlign: "center"}}> Follow <strong>@mattlovestech</strong> for more on TikTok, YouTube and Instagram </p>
+            <div style={{textAlign: "center"}}>
+                <p style={{color:"white",textAlign: "center"}}> Follow <strong>@mattlovestech</strong> for more on TikTok, YouTube and Instagram </p>
+                <a  href="https://www.hitwebcounter.com" target="_blank">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=7930314&style=0038&nbdigits=5&type=ip&initCount=0" title="IRR"   border="0"  alt="irr"/></a>
 
-        </Box>
+            </div>
+      </Box>
 
             </React.Fragment>
 
