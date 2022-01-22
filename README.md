@@ -1,5 +1,7 @@
 # IRR Calculator 
 
+My goal was to make the simplest sleekest IRR calculator around 🥳
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
