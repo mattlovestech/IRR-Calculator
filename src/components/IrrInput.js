@@ -8,3 +8,4 @@ export default function IrrInput(props) {
    // <Input style={{fontSize: "20px", paddingTop: "10px", fontFamily: "oswald", color: "white !important"}}  type={"number"} id={props.id} value={props.value} onChange={props.onChange}  />
    )
 }
+

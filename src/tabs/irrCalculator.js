@@ -7,6 +7,7 @@ import internalRateOfReturn from "../formulas/internalRateofRetrun";
 import IrrInput from "../components/IrrInput";
 import {CssTextField} from "../components/inputStyles";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 
 
@@ -20,6 +21,7 @@ export default class IRRCalculator extends Component {
                 year2: '',
                 year3: '',
                 year4: '',
+                points: 5
         }
     }
     handleSubmit = (event) => {
@@ -33,6 +35,10 @@ export default class IRRCalculator extends Component {
         this.setState({
             [event.target.id]: event.target.value
         })
+    }
+
+    renderInputs(numberOfInputs) {
+
     }
 
 
@@ -68,8 +74,8 @@ export default class IRRCalculator extends Component {
 
                     {/*<InputLabel htmlFor="component-simple">Year 4</InputLabel>*/}
                     <IrrInput label="Year 4" id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
-
-
+                    <Button variant="filled">+</Button>
+                {Array(this.state.points).fill(<IrrInput />)}
             </form>
            <h1 style={{"textAlign": "center",fontFamily: 'oswald', fontSize: "40px", color: "white"}} >IRR {internalRateOfReturn([-this.state.initial,this.state.year1,this.state.year2, this.state.year3, this.state.year4])}%</h1>
 
