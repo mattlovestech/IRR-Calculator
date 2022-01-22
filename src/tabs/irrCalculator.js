@@ -38,30 +38,30 @@ export default class IRRCalculator extends Component {
     <>
             <form onSubmit={this.handleSubmit} style={{"textAlign": "center", borderColor: "#EB9486", opacity: ".8"}}>
 
-                <FormControl  variant="standard">
-                    <InputLabel htmlFor="component-simple">Initial Investment</InputLabel>
-                    <IrrInput id="initial" value={this.state.initial} onChange={this.handleInputChange} />
+                <FormControl variant="standard" style={{color:"white !important"}}>
+                    {/*<InputLabel htmlFor="component-simple">Initial Investment</InputLabel>*/}
+                    <IrrInput label="Initial Investment" id="initial" value={this.state.initial} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
                 <FormControl variant="standard">
-                    <InputLabel  htmlFor="component-simple">Year 1</InputLabel>
-                    <IrrInput id="year1" value={this.state.year1}  onChange={this.handleInputChange}  />
+                    {/*<InputLabel  htmlFor="component-simple">Year 1</InputLabel>*/}
+                    <IrrInput label="Year 1" id="year1" value={this.state.year1}  onChange={this.handleInputChange}  />
                 </FormControl>
                 <br/>
                 <FormControl variant="standard">
-                    <InputLabel htmlFor="component-simple">Year 2</InputLabel>
-                    <IrrInput id="year2" value={this.state.year2} onChange={this.handleInputChange} />
+                    {/*<InputLabel htmlFor="component-simple">Year 2</InputLabel>*/}
+                    <IrrInput label="Year 2"  id="year2" value={this.state.year2} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
                 <FormControl variant="standard">
-                    <InputLabel htmlFor="component-simple">Year 3</InputLabel>
-                    <IrrInput   id="year3" value={this.state.year3} onChange={this.handleInputChange} />
+                    {/*<InputLabel htmlFor="component-simple">Year 3</InputLabel>*/}
+                    <IrrInput label="Year 3"   id="year3" value={this.state.year3} onChange={this.handleInputChange} />
                 </FormControl>
                 <br/>
 
                 <FormControl variant="standard">
-                    <InputLabel htmlFor="component-simple">Year 4</InputLabel>
-                    <IrrInput id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
+                    {/*<InputLabel htmlFor="component-simple">Year 4</InputLabel>*/}
+                    <IrrInput label="Year 4" id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
                 </FormControl>
 
             </form>
