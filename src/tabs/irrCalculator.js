@@ -16,8 +16,8 @@ export default class IRRCalculator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            initial: 5,
-            year1: 1,
+            initial: '',
+            year1: '',
 
                 points: 5,
                 yearsArray: {
@@ -91,34 +91,16 @@ export default class IRRCalculator extends Component {
                     {/*<InputLabel htmlFor="component-simple">Initial Investment</InputLabel>*/}
                     <IrrInput label="Initial Investment" id="initial" value={this.state.initial} onChange={this.handleInputChange} />
 
-                <br/>
 
                     {/*<InputLabel  htmlFor="component-simple">Year 1</InputLabel>*/}
                     <IrrInput label="Year 1" id="year1" value={this.state.year1}  onChange={this.handleInputChange}  />
 
-                <br/>
+                {Array.from(Array(Object.keys(this.state.yearsArray).length)).map((x, index) => <><IrrInput value={this.state.yearsArray["year" + (index + 2)]} onChange={this.handleInputChange} id={"year" + (index + 2)} label={"Year " + (index + 2) } key={index} /></>)}
 
-                {/*    /!*<InputLabel htmlFor="component-simple">Year 2</InputLabel>*!/*/}
-                {/*    <IrrInput label="Year 2"  id="year2" value={this.state.year2} onChange={this.handleInputChange} />*/}
-
-                {/*<br/>*/}
-
-                {/*    /!*<InputLabel htmlFor="component-simple">Year 3</InputLabel>*!/*/}
-                {/*    <IrrInput label="Year 3"   id="year3" value={this.state.year3} onChange={this.handleInputChange} />*/}
-
-                {/*<br/>*/}
+                <Button style={{marginLeft: "5px"}} onClick={() => this.addYear()} color="success" variant="contained">Add</Button>
+                <Button style={{marginLeft: "5px"}}  onClick={() => this.removeYear()} color="error" variant="contained">Remove</Button>
 
 
-                {/*    /!*<InputLabel htmlFor="component-simple">Year 4</InputLabel>*!/*/}
-                {/*    <IrrInput label="Year 4" id="year4" value={this.state.year4} onChange={this.handleInputChange}/>*/}
-                {/*    <br/>*/}
-                {Array.from(Array(Object.keys(this.state.yearsArray).length)).map((x, index) => <><IrrInput value={this.state.yearsArray["year" + (index + 2)]} onChange={this.handleInputChange} id={"year" + (index + 2)} label={"Year " + (index + 2) } key={index} /><br/></>)}
-                <br/>
-                <Button onClick={() => this.addYear()} variant="contained">Add</Button>
-                <Button onClick={() => this.removeYear()} variant="contained">Remove</Button>
-
-                <br/>
-                {/*{Array(this.state.points).fill(<IrrInput  />)}*/}
 
 
             </form>
