@@ -48,7 +48,7 @@ background: #EB9486;
 height: 50px;
 
 }
-.css-1480iag-MuiInputBase-root-MuiInput-root:after{
+.MuiInput-underline{
 
   font-family: 'Oswald', sans-serif;
   color: #fff !important;
