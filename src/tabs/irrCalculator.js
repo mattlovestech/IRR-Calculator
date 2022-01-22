@@ -74,8 +74,11 @@ export default class IRRCalculator extends Component {
 
                     {/*<InputLabel htmlFor="component-simple">Year 4</InputLabel>*/}
                     <IrrInput label="Year 4" id="year4" value={this.state.year4} onChange={this.handleInputChange}/>
-                    <Button variant="filled">+</Button>
-                {Array(this.state.points).fill(<IrrInput />)}
+                    <br/>
+                {/*<Button variant="contained">Add</Button>*/}
+                {/*<Button variant="contained">Remove</Button>*/}
+                {/*<br/>*/}
+                {/*{Array(this.state.points).fill(<IrrInput />)}*/}
             </form>
            <h1 style={{"textAlign": "center",fontFamily: 'oswald', fontSize: "40px", color: "white"}} >IRR {internalRateOfReturn([-this.state.initial,this.state.year1,this.state.year2, this.state.year3, this.state.year4])}%</h1>
 
