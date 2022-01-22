@@ -34,12 +34,14 @@ export default class IRRCalculator extends Component {
 
     handleInputChange = (event) => {
         switch (event.target.id) {
-            case "initial" || "year1":
+            case "initial":
+            case "year1":
                 console.log("do nothing")
                 this.setState({
                     [event.target.id]: event.target.value
                 })
                 break;
+
             default:
                 this.setState(prevState => {
                     let yearsArray = Object.assign({}, prevState.yearsArray);  // creating copy of state variable
