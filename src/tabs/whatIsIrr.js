@@ -21,7 +21,18 @@ export default function WhatIsIRR() {
     title="YouTube video player" frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen/>            </div>
+                <h1>IRR explained 👀 </h1>
+                <p>The internal rate of return (IRR) is a metric used in financial analysis to estimate the profitability of potential investments.</p>
+                <strong>IRR Can Help when Comparing</strong>
+                <p>Generally speaking, the higher an internal rate of return, the more desirable an investment is to undertake. IRR is uniform for investments of varying types and, as such, can be used to rank multiple prospective investments or projects on a relatively even basis. In general, when comparing investment options with other similar characteristics, the investment with the highest IRR probably would be considered the best.</p>
+
+                <div style={{backgroundColor: "black"}}>
+                    <h2> IRR Formula</h2>
+                </div>
+
             </div>
+
+
         </>
 
     )
