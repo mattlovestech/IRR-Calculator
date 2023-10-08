@@ -97,7 +97,7 @@ export default class IRRCalculator extends Component {
                     {/*<InputLabel  htmlFor="component-simple">Year 1</InputLabel>*/}
                     <IrrInput label="Year 1" id="year1" value={this.state.year1}  onChange={this.handleInputChange}  />
 
-                {Array.from(Array(Object.keys(this.state.yearsArray).length)).map((x, index) => <><IrrInput value={this.state.yearsArray["year" + (index + 2)]} onChange={this.handleInputChange} id={"year" + (index + 2)} label={"Year " + (index + 2) } key={index} /></>)}
+                {Array.from(Array(Object.keys(this.state.yearsArray).length)).map((x, index) => <><IrrInput value={this.state.yearsArray["year" + (index + 2)]} onChange={this.handleInputChange} id={"year" + (index + 2)} label={"Year " + (index + 2) + " Cash Flow" } key={index} /></>)}
 
                 <Button style={{marginLeft: "5px"}} onClick={() => this.addYear()} color="success" variant="contained">Add</Button>
                 <Button style={{marginLeft: "5px"}}  onClick={() => this.removeYear()} color="error" variant="contained">Remove</Button>
