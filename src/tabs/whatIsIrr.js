@@ -38,7 +38,8 @@ export default function WhatIsIRR() {
     style={{
         width: '100%',
         height: 'auto',
-        borderRadius: '8px', // This rounds the corners
+        borderRadius: '15px', // This rounds the corners
+        opacity: '80%',
        boxShadow: '0px 0px 2px 2px rgba(0, 0, 0, 0.4)' // This adds a light shadow
     }} 
     src={IRRFormulaImage} 
