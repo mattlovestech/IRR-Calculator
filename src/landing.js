@@ -97,7 +97,7 @@ export default function BasicTabs() {
               <p style={{color:"white", textAlign: "center"}}>
     Created with 💜 by  
     <strong>
-        <a href="https://mattlovestech.com" rel="noopener noreferrer" target="_blank"> @mattlovestech</a>
+        <a style={{color:"white"}} href="https://mattlovestech.com" rel="noopener noreferrer" target="_blank"> @mattlovestech</a>
     </strong>
 </p>
 

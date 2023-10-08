@@ -28,7 +28,7 @@ export default function WhatIsIRR() {
                    The power of IRR is that when comparing investment options with other similar characteristics, the investment with the highest IRR probably would be considered the best.</p>
                 <div style={{backgroundColor: "black", color: "white", padding: "10px"}}>
                     <h2> IRR Formula</h2>
-                    <img height="288" width={"100%"} src="/IRRFormula.png" alt={"IRR Formula"} />
+                    <img height="288" width={"100%"} src="src/tabs/IRRFormula.png" alt={"IRR Formula"} />
                 </div>
 
             </div>
