@@ -9,13 +9,12 @@ export default function WhatIsIRR() {
                 paddingLeft: "20px",
                 paddingRight: "20px",
                 color: "black",
-                opacity: ".8"
+                opacity: ".7"
             }}>
-                <h1>About Internal Rate of Return</h1> 
-                <br/> The discount rate at which the net present value (NPV) of a series of projected cash flows equals zero, serving as a key metric to evaluate and compare the potential profitability of investments.
+                <strong> Internal Rate of Return</strong> is defined as the discount rate at which the net present value (NPV) of a series of projected cash flows equals zero, serving as a key metric to evaluate and compare the potential profitability of investments.
 
 
-            <h4>TL:DR - just watch this video I made👇🏿</h4>
+            <h2>TL:DR - just watch this video I made👇🏿</h2>
             <div style={{textAlign: "center"}}>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/3P4syXdF7mg"
     title="YouTube video player" frameBorder="0"
