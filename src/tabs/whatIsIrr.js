@@ -1,6 +1,5 @@
 import * as React from "react";
-import Tabs from "@mui/material/Tabs";
-import Alert from "@mui/material/Alert";
+import IRRFormulaImage from './IRRFormula.png';
 
 export default function WhatIsIRR() {
     return(<>
@@ -28,7 +27,7 @@ export default function WhatIsIRR() {
                    The power of IRR is that when comparing investment options with other similar characteristics, the investment with the highest IRR probably would be considered the best.</p>
                 <div style={{backgroundColor: "black", color: "white", padding: "10px"}}>
                     <h2> IRR Formula</h2>
-                    <img height="288" width={"100%"} src="src/tabs/IRRFormula.png" alt={"IRR Formula"} />
+                    <img height="288" width={"100%"} src={IRRFormulaImage} alt={"IRR Formula"} />
                 </div>
 
             </div>
