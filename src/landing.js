@@ -95,9 +95,9 @@ export default function BasicTabs() {
             </TabPanel>
             <div style={{textAlign: "center"}}>
               <p style={{color:"white", textAlign: "center"}}>
-    Created with 💜  by 
+    Created with 💜 by  
     <strong>
-        <a href="https://mattlovestech.com" rel="noopener noreferrer" target="_blank">@mattlovestech</a>
+        <a href="https://mattlovestech.com" rel="noopener noreferrer" target="_blank"> @mattlovestech</a>
     </strong>
 </p>
 
