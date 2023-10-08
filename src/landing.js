@@ -78,8 +78,8 @@ export default function BasicTabs() {
                 <div style={{opacity: ".85", backgroundColor: "#EB9486", padding: "20px", fontFamily: "oswald", fontSize: "20px"}}>
                     Wait...<strong>what is IRR? 👀</strong>
                     <br/>
-                    IRR stands for Internal Rate of Return, it is an important data point
-                    when making investment decisions
+                    Internal Rate of Return (IRR), is a metric to
+                    compare investments 
                    <br/>
                    <br/>
                     <Button onClick={() => setValue(1)} style={{backgroundColor: "#121212", color: "#EB9486"}} variant={"outlined"}>Learn More</Button>
