@@ -72,8 +72,7 @@ export default function BasicTabs() {
             </Box>
             <TabPanel value={value} index={0} >
                 <br/>
-                <p style={{fontFamily: 'oswald' ,fontSize: "20px", paddingLeft: "20px", paddingRight: "20px", color: "white"}}><strong>How it Works</strong> <br/> Add your data
-                    for each year & instantly calculate see the IRR calculated</p>
+                <p style={{fontFamily: 'oswald' ,fontSize: "20px", paddingLeft: "20px", paddingRight: "20px", color: "white"}}><strong>How it Works</strong> <br/> Add your initial investment and estimated cash flow each period, then instantly see the IRR calculated</p>
                 <IRRCalculator/>
                 <br/>
                 <div style={{opacity: ".85", backgroundColor: "#EB9486", padding: "20px", fontFamily: "oswald", fontSize: "20px"}}>
